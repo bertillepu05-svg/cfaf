@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    CFAF - Contact
+{% endblock %}
+
+{% block content %}
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="section-title">Contactez-nous</h1>
+                <p>Nous sommes là pour répondre à vos questions</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>contact@cfaf.org</p>
+                        <p class="text-muted small">Réponse sous 48h</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h4>Téléphone</h4>
+                        <p>+243 818 680 977</p>
+                        <p class="text-muted small">Lun-Ven, 9h-17h</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h4>WhatsApp</h4>
+                        <p>+243 818 680 977</p>
+                        <a href="https://wa.me/+243 818 680 977" class="btn btn-primary btn-sm mt-2">Écrire sur WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3>Notre adresse</h3>
+                    <p><i class="fas fa-map-marker-alt text-primary me-2"></i> Kinshasa, RDC<br>
+                    UNIKIN HOME 8 CENTRE BERRA</p>
+                    <div class="map-container mt-4">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63800.41946235259!2d15.2661664!3d-4.3252089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3187b3b6f7a7%3A0x4e7d5b7c2f2f5a7!2sKinshasa%2C%20Democratic%20Republic%20of%20the%20Congo!5e0!3m2!1sen!2s!4v1699999999999!5m2!1sen!2s" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Suivez-nous</h3>
+                    <p>Restez connectées avec CFAF sur les réseaux sociaux</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-primary rounded-circle" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-primary rounded-circle" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-primary rounded-circle" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-primary rounded-circle" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div class="mt-4 p-4 bg-light rounded-4">
+                        <h4><i class="fas fa-clock text-primary me-2"></i> Horaires</h4>
+                        <p class="mb-0"><strong>Lundi - Vendredi:</strong> 9h00 - 17h00</p>
+                        <p><strong>Samedi:</strong> 9h00 - 13h00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,316 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    CFAF - À propos | Notre mission
+{% endblock %}
+
+ {% block extra_css %}
+     <style>
+        /* Styles pour les photos d'équipe */
+        .team-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #0d6efd;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .team-img:hover {
+            transform: scale(1.05);
+        }
+        .founder-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #0d6efd;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .team-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            color: #0d6efd;
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            background: #0d6efd;
+            color: white;
+        }
+
+        /* ===== ANIMATIONS D'APPARITION ===== */
+        .animate-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .animate-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animation pour les photos (zoom + apparition) */
+        .animate-photo {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.5s ease-out;
+        }
+        .animate-photo.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* Animation pour le fondateur (plus rapide) */
+        .animate-founder {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.6s ease-out;
+        }
+        .animate-founder.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+ {% endblock %}
+
+
+{% block content %}
+    <!-- Histoire & Mission -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 animate-item">
+                    <h1 class="section-title">Notre histoire</h1>
+                    <p class="lead">Depuis 2026, nous formons les femmes aux métiers du numérique en RDC.</p>
+                    <p>CFAF est né d'un constat simple : les femmes sont sous-représentées dans la tech congolaise. Notre mission est de renverser cette tendance en offrant des formations accessibles et de qualité.</p>
+                    <p>Aujourd'hui, nous avons formé plus de 500 femmes et collaborons avec une dizaine d'entreprises partenaires.</p>
+                </div>
+                <div class="col-lg-6 animate-photo">
+                    <img src="{% static 'images/equipes/1 (1).jpg' %}" alt="Équipe CFAF" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 animate-item">
+                    <div class="text-center p-4">
+                        <i class="fas fa-bullseye" style="font-size: 3rem; color: var(--primary);"></i>
+                        <h3 class="mt-3">Notre mission</h3>
+                        <p>Former et accompagner les femmes congolaises vers une autonomie durable grâce au numérique.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 animate-item">
+                    <div class="text-center p-4">
+                        <i class="fas fa-eye" style="font-size: 3rem; color: var(--primary);"></i>
+                        <h3 class="mt-3">Notre vision</h3>
+                        <p>Un écosystème numérique inclusif où chaque femme a sa place et contribue au développement de la RDC.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÉQUIPE FONDATRICE AVEC PHOTOS ET ANIMATION -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5 animate-item">
+                <h2 class="section-title">L'équipe fondatrice</h2>
+                <p>Des passionnés du numérique engagés pour l'autonomisation des femmes</p>
+            </div>
+
+            <!-- Initiateur - Marco Nathan Tandu -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <div class="card p-4 border-0 shadow-lg team-card animate-founder" id="founderCard">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center text-md-start">
+                                <img src="{% static 'images/equipes/3 (1).jpg' %}" alt="Marco Nathan Tandu" class="founder-img">
+                            </div>
+                            <div class="col-md-8 text-center text-md-start mt-3 mt-md-0">
+                                <div class="mb-2">
+                                    <span class="badge bg-primary px-3 py-2">🚀 Initiateur / Fondateur</span>
+                                </div>
+                                <h3 class="mb-2">Marco Nathan Tandu</h3>
+                                <p class="lead text-primary">"Créer un espace où les femmes congolaises deviennent leaders du numérique"</p>
+                                <p class="text-muted">Visionnaire et porteur du projet CFAF, Marco a réuni une équipe d'experts pour concrétiser cette mission.</p>
+                                <div class="mt-3">
+                                    <a href="#" class="social-icon me-2"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon me-2"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Associés avec photos -->
+            <div class="mt-4">
+                <h3 class="text-center mb-4 animate-item">Nos associés</h3>
+                <div class="row g-4">
+                    <!-- Alicia bijanu -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card text-center h-100 border-0 shadow-sm team-card p-3 animate-item" id="member1">
+                            <div class="text-center">
+                                <img src="{% static 'images/equipes/3 (4).jpg' %}" alt="Alice Keanu" class="team-img mb-3">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="mb-1">Alicia BIJANU</h5>
+                                <span class="badge bg-secondary mb-2">Associée</span>
+                                <p class="small text-muted">Experte en marketing digital et stratégie de contenu.</p>
+                                <div class="mt-2">
+                                    <a href="#" class="social-icon me-1"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Rivaldo  -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card text-center h-100 border-0 shadow-sm team-card p-3 animate-item" id="member2">
+                            <div class="text-center">
+                                <img src="{% static 'images/equipes/3 (2).jpg' %}" alt="Voldi Souligne" class="team-img mb-3">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="mb-1">Rivaldo WOMI</h5>
+                                <span class="badge bg-secondary mb-2">Associé</span>
+                                <p class="small text-muted">Spécialiste en développement web et formation technique.</p>
+                                <div class="mt-2">
+                                    <a href="#" class="social-icon me-1"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Divine -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card text-center h-100 border-0 shadow-sm team-card p-3 animate-item" id="member3">
+                            <div class="text-center">
+                                <img src="{% static 'images/equipes/3 (4).jpg' %}" alt="Divine" class="team-img mb-3">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="mb-1">Divine NTUNGA</h5>
+                                <span class="badge bg-secondary mb-2">Associée</span>
+                                <p class="small text-muted">Responsable pédagogique et accompagnement des apprenantes.</p>
+                                <div class="mt-2">
+                                    <a href="#" class="social-icon me-1"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- John Heshima -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card text-center h-100 border-0 shadow-sm team-card p-3 animate-item" id="member4">
+                            <div class="text-center">
+                                <img src="{% static 'images/equipes/3 (3).jpg' %}" alt="John Heshima" class="team-img mb-3">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="mb-1">John Heshima</h5>
+                                <span class="badge bg-secondary mb-2">Associé</span>
+                                <p class="small text-muted">Expert en relations institutionnelles et développement des partenariats.</p>
+                                <div class="mt-2">
+                                    <a href="#" class="social-icon me-1"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nos valeurs -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5 animate-item">
+                <h2 class="section-title">Nos valeurs</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 animate-item">
+                    <div class="card text-center p-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="fas fa-gem" style="font-size: 2rem; color: var(--primary);"></i>
+                            <h5 class="card-title mt-3">Excellence</h5>
+                            <p class="card-text">Des formations de qualité avec des formateurs expérimentés.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-item">
+                    <div class="card text-center p-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="fas fa-hand-holding-heart" style="font-size: 2rem; color: var(--primary);"></i>
+                            <h5 class="card-title mt-3">Solidarité</h5>
+                            <p class="card-text">Un réseau d'entraide et de mentorat entre femmes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-item">
+                    <div class="card text-center p-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="fas fa-lightbulb" style="font-size: 2rem; color: var(--primary);"></i>
+                            <h5 class="card-title mt-3">Innovation</h5>
+                            <p class="card-text">Des programmes adaptés aux besoins du marché actuel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+
+{% block extra_js %}
+    <!-- Animation au scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sélectionner tous les éléments à animer
+            const animatedElements = document.querySelectorAll('.animate-item, .animate-photo, .animate-founder');
+            
+            // Créer l'observateur
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Une seule animation par élément
+                    }
+                });
+            }, { threshold: 0.1 }); // Se déclenche quand 10% de l'élément est visible
+            
+            // Observer chaque élément
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+{% endblock  %}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    CFAF - Nos formations
+{% endblock %}
+     
+
+
+{% block content %}
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="section-title">Nos formations</h1>
+                <p>Des programmes conçus pour vous rendre opérationnelle rapidement</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="{% static 'images/autres/2 (4).jpg' %}" class="card-img-top" alt="Développement Web">
+                        <div class="card-body">
+                            <h5 class="card-title">💻 Développement Web</h5>
+                            <p class="card-text">Apprenez à créer des sites web modernes avec HTML, CSS, JavaScript et React.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-clock text-primary me-2"></i> 3 mois</li>
+                                <li><i class="fas fa-calendar text-primary me-2"></i> 3 soirs/semaine</li>
+                                <li><i class="fas fa-certificate text-primary me-2"></i> Certification</li>
+                            </ul>
+                            <span class="badge bg-primary">Nouveau</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="{% static 'images/autres/2 (1).jpg' %}" class="card-img-top" alt="Marketing Digital">
+                        <div class="card-body">
+                            <h5 class="card-title">📱 Marketing Digital</h5>
+                            <p class="card-text">Maîtrisez les réseaux sociaux, le SEO, la publicité en ligne et l'email marketing.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-clock text-primary me-2"></i> 2 mois</li>
+                                <li><i class="fas fa-calendar text-primary me-2"></i> 2 soirs/semaine</li>
+                                <li><i class="fas fa-certificate text-primary me-2"></i> Certification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="{% static 'images/autres/2 (5).jpg' %}" class="card-img-top" alt="Data Science">
+                        <div class="card-body">
+                            <h5 class="card-title">📊 Data Science</h5>
+                            <p class="card-text">Analysez et visualisez des données avec Python, Pandas et Matplotlib.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-clock text-primary me-2"></i> 4 mois</li>
+                                <li><i class="fas fa-calendar text-primary me-2"></i> 2 soirs/semaine</li>
+                                <li><i class="fas fa-certificate text-primary me-2"></i> Certification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="{% static 'images/autres/2 (2).jpg' %}" class="card-img-top" alt="Design UX/UI">
+                        <div class="card-body">
+                            <h5 class="card-title">🎨 Design Graphique</h5>
+                            <p class="card-text">Créez vos réprésentations visuelle avec Photoshop.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-clock text-primary me-2"></i> 2 mois</li>
+                                <li><i class="fas fa-calendar text-primary me-2"></i> 2 soirs/semaine</li>
+                                <li><i class="fas fa-certificate text-primary me-2"></i> Certification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="{% static 'images/autres/2 (8).jpg' %}" class="card-img-top" alt="No-Code">
+                        <div class="card-body">
+                            <h5 class="card-title">⚡ No-Code</h5>
+                            <p class="card-text">Créez des applications et sites web sans coder avec des outils no-code.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-clock text-primary me-2"></i> 1.5 mois</li>
+                                <li><i class="fas fa-calendar text-primary me-2"></i> 2 soirs/semaine</li>
+                                <li><i class="fas fa-certificate text-primary me-2"></i> Certification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="{% static 'images/autres/3 (5).jpg' %}" class="card-img-top" alt="Gestion de projet">
+                        <div class="card-body">
+                            <h5 class="card-title">📋 Gestion de projet</h5>
+                            <p class="card-text">Apprenez les méthodologies agiles et la gestion d'équipe.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-clock text-primary me-2"></i> 2 mois</li>
+                                <li><i class="fas fa-calendar text-primary me-2"></i> 2 soirs/semaine</li>
+                                <li><i class="fas fa-certificate text-primary me-2"></i> Certification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h3>Vous souhaitez vous inscrire ?</h3>
+            <p class="mb-4">Contactez-nous pour connaître les prochaines dates de session</p>
+            <a href="https://wa.me/243123456789" class="btn btn-light btn-lg">
+                <i class="fab fa-whatsapp me-2"></i> Nous contacter
+            </a>
+        </div>
+    </section>
+
+{% endblock %}
+

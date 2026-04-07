@@ -2,28 +2,30 @@
    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="{% static 'images/logos/icon.jpg' %}" alt="" width="40%" class="rounded"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+           <div class="d-flex justify-between">
+                <a class="navbar-brand" href="index.html"><img src="{% static 'images/logos/icon.jpg' %}" alt="" width="40%" class="rounded"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="/" class="{% if request.path == '/' %}active{% endif %} nav-link">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/a_propos/" class= "{% if request.path == '/a_propos/' %}active{% endif %} nav-link">À propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/formations/" class="{% if request.path == '/formations/' %}active{% endif %} nav-link">Formations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/evenements/" class= "{% if request.path == '/evenements/' %}active{% endif %} nav-link">Événements</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/contact/" class= "{% if request.path == '/contact/' %}active{% endif %} nav-link">Contact</a>
-                    </li>
-                </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="/" class="{% if request.path == '/' %}active{% endif %} nav-link">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/a_propos/" class= "{% if request.path == '/a_propos/' %}active{% endif %} nav-link">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/formations/" class="{% if request.path == '/formations/' %}active{% endif %} nav-link">Formations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/evenements/" class= "{% if request.path == '/evenements/' %}active{% endif %} nav-link">Événements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact/" class= "{% if request.path == '/contact/' %}active{% endif %} nav-link">Contact</a>
+                        </li>
+                    </ul>
             </div>
         </div>
     </nav>
